@@ -1,32 +1,39 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#ifndef _FRUIT_CPP
+#define _FRUIT_CPP
+
 #include <iostream>
 #include <string>
+#include "product.cpp"
 
 using namespace std;
 
-class Fruit
+class Fruit: public Product
 {
 public:
-  Fruit(string name, bool pepin)
-  {
-    this->name = name;
-    this->pepin = pepin;
-  }
+    Fruit(){
+        Fruit("empty", false);
+    }
 
-  ~Fruit();
+    Fruit(string name, bool pepin)
+    {
+        this->name = name;
+        this->pepin = pepin;
+      }
 
-  string toString()
-  {
-    return this->name;
-  }
-  bool contientPepin()
-  {
-    return this->pepin;
-  }
+    ~Fruit();
+
+    string toString()
+    {
+        return this->name;
+    }
+    bool contientPepin()
+    {
+        return this->pepin;
+    }
 
 private:
-  string name;
-  bool pepin;
+    string name;
+    bool pepin;
 };
+
+#endif /* _FRUIT_CPP */
