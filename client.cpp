@@ -6,11 +6,13 @@
 #include "fruit.cpp"
 #include "fruitDecorator.cpp"
 #include "bracesFruitDecorator.cpp"
+#include "chevronFruitDecorator.cpp"
+#include "slashFruitDecorator.cpp"
 
 using namespace std;
 
 int main()
 {
-  Product *fraise = new BracesFruitDecorator(new Fruit("fraise",0));
+  Product *fraise = new SlashFruitDecorator(new Fruit("fraise",0));
   cout << fraise->toString() << endl;
 }
