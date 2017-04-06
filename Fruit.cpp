@@ -15,6 +15,8 @@ public:
     this->pepin = pepin;
   }
 
+  ~Fruit();
+
   string toString()
   {
     return this->name;
