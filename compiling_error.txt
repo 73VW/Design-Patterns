@@ -1,0 +1,4 @@
+C:\Users\laurent.gander\Documents\HE-ARC\2�me\Design Patterns\TPs\TP_2\DesignPattern\TP_2.cpp: In function 'int main(int, char**)':
+C:\Users\laurent.gander\Documents\HE-ARC\2�me\Design Patterns\TPs\TP_2\DesignPattern\TP_2.cpp:11:12: error: expected ';' before 'panier'
+   Panier() panier;
+            ^
