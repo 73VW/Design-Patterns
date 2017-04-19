@@ -13,18 +13,17 @@ using namespace std;
 class SlashFruitDecorator: public FruitDecorator
 {
  public:
-   // 6. Optional embellishment
    SlashFruitDecorator(Fruit *fr): FruitDecorator(fr){}
 
    string toString(){
-       string str ="/ ";
+       string str ="/";
        str += FruitDecorator::toString();
-       str += " / ";
+       str += "/";
        if(FruitDecorator::contientPepin())
-            str += "avec pepin";
+            str += "Avec pepins";
         else
-            str += "sans pepin";
-        str += " / ";
+            str += "Sans pepins";
+        str += "/";
        return str;
    }
 };

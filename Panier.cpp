@@ -6,36 +6,48 @@
 #include <unistd.h>
 #include <iostream>
 #include <string>
+#include <vector>
+
 #include "fruit.cpp"
+#include "product.cpp"
 
 using namespace std;
 
-class Panier : public Fruit
+class Panier : public Product
 {
-public:
-  Panier()
-  {
-    panier = new Fruit("Banane", 0);
-    panier[1]  = new Fruit("Pomme", 1);
-    panier[2] = new Fruit("Fraise", 0);
-    panier[3] = new Fruit("Fraise", 0);
-  }
-
-  ~Panier();
-
-  bool contientPepin()
-  {
-    for (int i = 0; i<4;i++)
-    {
-      if(panier[i]->contientPepin())
-      {
-        return true;
-      }
-      return false;
-    }
-  }
 
 private:
-  Fruit* panier[];
+    vector < Product * > products;
+
+
+public:
+    Panier(){}
+
+    ~Panier();
+
+
+    bool contientPepin(){
+
+         for (unsigned int i = 0; i < products.size(); i++)
+        // 5. Use polymorphism to delegate to children
+          if(products[i]->contientPepin()==1){
+            return true;
+          }
+          return false;
+    }
+
+    void add(Product *ele)
+    {
+        products.push_back(ele);
+    }
+
+    string toString()
+    {
+        string panierToString;
+        for (unsigned int i = 0; i < products.size(); i++){
+          panierToString += products[i]->toString() + "\n";
+        }
+        return panierToString;
+    }
 };
 #endif /* _PANIER_CPP */

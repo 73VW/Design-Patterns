@@ -8,6 +8,7 @@ using namespace std;
 class Product
 {
   public:
+    string name;
     virtual string toString() = 0;
     virtual bool contientPepin() = 0;
 };

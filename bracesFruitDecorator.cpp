@@ -21,9 +21,9 @@ class BracesFruitDecorator: public FruitDecorator
        str += FruitDecorator::toString();
        str += "|";
        if(FruitDecorator::contientPepin())
-            str += "Avec pepin";
+            str += "Avec pepins";
         else
-            str += "Sans pepin";
+            str += "Sans pepins";
         str += "}";
        return str;
    }
