@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <Commande>
+#include "Commande.cpp"
 
 using namespace std;
 

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <EtatCommande>
+#include "EtatCommande.cpp"
 
 using namespace std;
 
