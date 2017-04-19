@@ -12,9 +12,11 @@ class Commande
 public:
   Commande(){
     etat = new CommandeEnAttente();
-    statut = 0;
   }
-  void traiter();
+  void traiter()
+  {
+    this->etat->traiter();
+  }
 
 private:
   EtatCommande* etat;

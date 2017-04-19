@@ -7,7 +7,7 @@
 
 using namespace std;
 
-class CommandeEnvoyee : public EtatCommande
+class CommandeEnvoyee: public EtatCommande
 {
 public:
   CommandeEnvoyee(){

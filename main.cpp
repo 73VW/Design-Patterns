@@ -10,4 +10,5 @@ using namespace std;
 int main()
 {
   Commande commande;
+  commande.traiter();
 }
