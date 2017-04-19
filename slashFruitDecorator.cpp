@@ -17,14 +17,14 @@ class SlashFruitDecorator: public FruitDecorator
    SlashFruitDecorator(Fruit *fr): FruitDecorator(fr){}
 
    string toString(){
-       string str ="/";
+       string str ="/ ";
        str += FruitDecorator::toString();
-       str += "/";
+       str += " / ";
        if(FruitDecorator::contientPepin())
-            str += "Avec pepin";
+            str += "avec pepin";
         else
-            str += "Sans pepin";
-        str += "/";
+            str += "sans pepin";
+        str += " / ";
        return str;
    }
 };

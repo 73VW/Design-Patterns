@@ -1,21 +1,24 @@
+#ifndef _PANIER_CPP
+#define _PANIER_CPP
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <iostream>
 #include <string>
-#include "Fruit.cpp"
+#include "fruit.cpp"
 
 using namespace std;
 
-class Panier
+class Panier : public Fruit
 {
 public:
   Panier()
   {
-    panier[0] = new Fruit("Banane", false);
-    panier[1] = new Fruit("Pomme", true);
-    panier[2] = new Fruit("Fraise", false);
-    panier[3] = new Fruit("Fraise", false);
+    panier = new Fruit("Banane", 0);
+    panier[1]  = new Fruit("Pomme", 1);
+    panier[2] = new Fruit("Fraise", 0);
+    panier[3] = new Fruit("Fraise", 0);
   }
 
   ~Panier();
@@ -33,5 +36,6 @@ public:
   }
 
 private:
-  Fruit *panier[];
+  Fruit* panier[];
 };
+#endif /* _PANIER_CPP */

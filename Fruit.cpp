@@ -18,7 +18,7 @@ public:
     {
         this->name = name;
         this->pepin = pepin;
-      }
+    }
 
     ~Fruit();
 
