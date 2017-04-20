@@ -1,3 +1,6 @@
+#ifndef _POTAGEFACTORY_CPP
+#define _POTAGEFACTORY_CPP
+
 #include <iostream>
 #include "legumes.cpp"
 #include "herbes.cpp"
@@ -8,15 +11,17 @@ class CuissonFactory : public AbstractFactory
 {
 public:
 public:
-  Legumes createLegumes(){
+  Legumes* createLegumes(){
     return new Manioc();
   }
 
-  Herbes createHerbes(){
+  Herbes* createHerbes(){
     return new Basilic();
   }
 
-  Huiles createHuiles(){
+  Huiles* createHuiles(){
     return new Soja();
   }
-}
+};
+
+#endif

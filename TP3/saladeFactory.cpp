@@ -1,3 +1,6 @@
+#ifndef _SALADEFACTORY_CPP
+#define _SALADEFACTORY_CPP
+
 #include <iostream>
 #include "legumes.cpp"
 #include "herbes.cpp"
@@ -7,15 +10,16 @@
 class SaladeFactory : public AbstractFactory
 {
 public:
-  Legumes createLegumes(){
+  Legumes* createLegumes(){
     return new Aubergine();
   }
 
-  Herbes createHerbes(){
+  Herbes* createHerbes(){
     return new Romarin();
   }
 
-  Huiles createHuiles(){
+  Huiles* createHuiles(){
     return new Palme();
   }
-}
+};
+#endif

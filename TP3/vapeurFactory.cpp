@@ -1,3 +1,6 @@
+#ifndef _VAPEURFACTORY_CPP
+#define _VAPEURFACTORY_CPP
+
 #include <iostream>
 #include "legumes.cpp"
 #include "herbes.cpp"
@@ -7,15 +10,16 @@
 class VapeurFactory : public AbstractFactory
 {
 public:
-  Legumes createLegumes(){
+  Legume* createLegumes(){
     return new Courgette();
   }
 
-  Herbes createHerbes(){
+  Herbes* createHerbes(){
     return new Provence();
   }
 
-  Huiles createHuiles(){
+  Huiles* createHuiles(){
     return new Tournesol();
   }
-}
+};
+#endif
