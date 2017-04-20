@@ -1,0 +1,21 @@
+#include <iostream>
+#include "legumes.cpp"
+#include "herbes.cpp"
+#include "huiles.cpp"
+#include "abstractFactory.cpp"
+
+class VapeurFactory : public AbstractFactory
+{
+public:
+  Legumes createLegumes(){
+    return new Courgette();
+  }
+
+  Herbes createHerbes(){
+    return new Provence();
+  }
+
+  Huiles createHuiles(){
+    return new Tournesol();
+  }
+}
