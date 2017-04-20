@@ -1,3 +1,6 @@
+#ifndef _LEGUMES_CPP
+#define _LEGUMES_CPP
+
 #include <iostream>
 #include <string>
 
@@ -39,3 +42,4 @@ public:
         return "Manioc";
     }
 };
+#endif

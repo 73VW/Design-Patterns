@@ -12,10 +12,13 @@ using namespace std;
 
 class Menu {
 public:
-    void construct(Factory *f){
-        legume = f->createLegumes;
-        huile = f->createHuiles;
-        herbe = f->createHerbes;
+    Menu(AbstractFactory *f){
+        factory=f;
+    }
+    void construct(){
+        legume = factory->createLegumes();
+        huile = factory->createHuiles();
+        herbe = factory->createHerbes();
     }
 
     string toString(){
@@ -25,6 +28,7 @@ private:
     Legumes *legume;
     Huiles *huile;
     Herbes *herbe;
+    AbstractFactory *factory;
 };
 
 #endif

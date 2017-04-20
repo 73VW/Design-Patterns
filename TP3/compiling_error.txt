@@ -1,0 +1,229 @@
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp: In member function 'std::__cxx11::string Menu::toString()':
+E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:25:60: error: invalid operands of types 'const char [40]' and '<unresolved overloaded function type>' to binary 'operator+'
+         return "Ce menu contient les produits suivants:" + endl + legume->toString() + endl + huile->toString() + endl + herbe->toString();
+                                                            ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp: At global scope:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:10:3: error: invalid abstract return type 'Legumes'
+   Legumes createLegumes(){
+   ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:7:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\legumes.cpp:9:7: note:   because the following virtual functions are pure within 'Legumes':
+ class Legumes {
+       ^
+E:\Documents\Design Patterns\DesignPattern\TP3\legumes.cpp:11:17: note: 	virtual std::__cxx11::string Legumes::toString()
+  virtual string toString() = 0;
+                 ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:14:3: error: invalid abstract return type 'Herbes'
+   Herbes createHerbes(){
+   ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:8:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\herbes.cpp:8:7: note:   because the following virtual functions are pure within 'Herbes':
+ class Herbes {
+       ^
+E:\Documents\Design Patterns\DesignPattern\TP3\herbes.cpp:10:20: note: 	virtual std::__cxx11::string Herbes::toString()
+     virtual string toString() = 0;
+                    ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:18:3: error: invalid abstract return type 'Huiles'
+   Huiles createHuiles(){
+   ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:6:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\huiles.cpp:9:7: note:   because the following virtual functions are pure within 'Huiles':
+ class Huiles {
+       ^
+E:\Documents\Design Patterns\DesignPattern\TP3\huiles.cpp:11:17: note: 	virtual std::__cxx11::string Huiles::toString()
+  virtual string toString() = 0;
+                 ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:10:11: error: conflicting return type specified for 'virtual Legumes CuissonFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:12:23: error:   overriding 'virtual Legumes* AbstractFactory::createLegumes()'
+      virtual Legumes* createLegumes() = 0;
+                       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:14:10: error: conflicting return type specified for 'virtual Herbes CuissonFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:13:22: error:   overriding 'virtual Herbes* AbstractFactory::createHerbes()'
+      virtual Herbes* createHerbes() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:18:10: error: conflicting return type specified for 'virtual Huiles CuissonFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:14:22: error:   overriding 'virtual Huiles* AbstractFactory::createHuiles()'
+      virtual Huiles* createHuiles() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:21:1: error: expected ';' after class definition
+ }
+ ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp: In member function 'virtual Legumes CuissonFactory::createLegumes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:10:11: error: invalid abstract return type for member function 'virtual Legumes CuissonFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:11:29: error: could not convert '(operator new(4u), (<statement>, ((Christophine*)<anonymous>)))' from 'Christophine*' to 'Legumes'
+     return new Christophine();
+                             ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp: In member function 'virtual Herbes CuissonFactory::createHerbes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:14:10: error: invalid abstract return type for member function 'virtual Herbes CuissonFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:15:23: error: could not convert '(operator new(4u), (<statement>, ((Persil*)<anonymous>)))' from 'Persil*' to 'Herbes'
+     return new Persil();
+                       ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp: In member function 'virtual Huiles CuissonFactory::createHuiles()':
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:18:10: error: invalid abstract return type for member function 'virtual Huiles CuissonFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:19:23: error: could not convert '(operator new(4u), (<statement>, ((Olives*)<anonymous>)))' from 'Olives*' to 'Huiles'
+     return new Olives();
+                       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:5:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\potageFactory.cpp: At global scope:
+E:\Documents\Design Patterns\DesignPattern\TP3\potageFactory.cpp:7:7: error: redefinition of 'class CuissonFactory'
+ class CuissonFactory : public AbstractFactory
+       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:4:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\cuissonFactory.cpp:7:7: error: previous definition of 'class CuissonFactory'
+ class CuissonFactory : public AbstractFactory
+       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:6:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:10:3: error: invalid abstract return type 'Legumes'
+   Legumes createLegumes(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:14:3: error: invalid abstract return type 'Herbes'
+   Herbes createHerbes(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:18:3: error: invalid abstract return type 'Huiles'
+   Huiles createHuiles(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:10:11: error: conflicting return type specified for 'virtual Legumes SaladeFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:12:23: error:   overriding 'virtual Legumes* AbstractFactory::createLegumes()'
+      virtual Legumes* createLegumes() = 0;
+                       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:6:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:14:10: error: conflicting return type specified for 'virtual Herbes SaladeFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:13:22: error:   overriding 'virtual Herbes* AbstractFactory::createHerbes()'
+      virtual Herbes* createHerbes() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:6:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:18:10: error: conflicting return type specified for 'virtual Huiles SaladeFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:14:22: error:   overriding 'virtual Huiles* AbstractFactory::createHuiles()'
+      virtual Huiles* createHuiles() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:6:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:21:1: error: expected ';' after class definition
+ }
+ ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp: In member function 'virtual Legumes SaladeFactory::createLegumes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:10:11: error: invalid abstract return type for member function 'virtual Legumes SaladeFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:11:26: error: could not convert '(operator new(4u), (<statement>, ((Aubergine*)<anonymous>)))' from 'Aubergine*' to 'Legumes'
+     return new Aubergine();
+                          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp: In member function 'virtual Herbes SaladeFactory::createHerbes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:14:10: error: invalid abstract return type for member function 'virtual Herbes SaladeFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:15:24: error: could not convert '(operator new(4u), (<statement>, ((Romarin*)<anonymous>)))' from 'Romarin*' to 'Herbes'
+     return new Romarin();
+                        ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp: In member function 'virtual Huiles SaladeFactory::createHuiles()':
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:18:10: error: invalid abstract return type for member function 'virtual Huiles SaladeFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:19:22: error: could not convert '(operator new(4u), (<statement>, ((Palme*)<anonymous>)))' from 'Palme*' to 'Huiles'
+     return new Palme();
+                      ^
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp: At global scope:
+E:\Documents\Design Patterns\DesignPattern\TP3\saladeFactory.cpp:21:1: error: multiple types in one declaration
+ }
+ ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:7:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:10:3: error: invalid abstract return type 'Legumes'
+   Legumes createLegumes(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:14:3: error: invalid abstract return type 'Herbes'
+   Herbes createHerbes(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:18:3: error: invalid abstract return type 'Huiles'
+   Huiles createHuiles(){
+   ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:10:11: error: conflicting return type specified for 'virtual Legumes VapeurFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:12:23: error:   overriding 'virtual Legumes* AbstractFactory::createLegumes()'
+      virtual Legumes* createLegumes() = 0;
+                       ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:7:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:14:10: error: conflicting return type specified for 'virtual Herbes VapeurFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:13:22: error:   overriding 'virtual Herbes* AbstractFactory::createHerbes()'
+      virtual Herbes* createHerbes() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:7:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:18:10: error: conflicting return type specified for 'virtual Huiles VapeurFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\menu.cpp:9:0,
+                 from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:2:
+E:\Documents\Design Patterns\DesignPattern\TP3\abstractFactory.cpp:14:22: error:   overriding 'virtual Huiles* AbstractFactory::createHuiles()'
+      virtual Huiles* createHuiles() = 0;
+                      ^
+In file included from E:\Documents\Design Patterns\DesignPattern\TP3\client.cpp:7:0:
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:21:1: error: expected ';' after class definition
+ }
+ ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp: In member function 'virtual Legumes VapeurFactory::createLegumes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:10:11: error: invalid abstract return type for member function 'virtual Legumes VapeurFactory::createLegumes()'
+   Legumes createLegumes(){
+           ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:11:26: error: could not convert '(operator new(4u), (<statement>, ((Courgette*)<anonymous>)))' from 'Courgette*' to 'Legumes'
+     return new Courgette();
+                          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp: In member function 'virtual Herbes VapeurFactory::createHerbes()':
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:14:10: error: invalid abstract return type for member function 'virtual Herbes VapeurFactory::createHerbes()'
+   Herbes createHerbes(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:15:25: error: could not convert '(operator new(4u), (<statement>, ((Provence*)<anonymous>)))' from 'Provence*' to 'Herbes'
+     return new Provence();
+                         ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp: In member function 'virtual Huiles VapeurFactory::createHuiles()':
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:18:10: error: invalid abstract return type for member function 'virtual Huiles VapeurFactory::createHuiles()'
+   Huiles createHuiles(){
+          ^
+E:\Documents\Design Patterns\DesignPattern\TP3\vapeurFactory.cpp:19:26: error: could not convert '(operator new(4u), (<statement>, ((Tournesol*)<anonymous>)))' from 'Tournesol*' to 'Huiles'
+     return new Tournesol();
+                          ^

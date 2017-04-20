@@ -1,11 +1,13 @@
+#ifndef _HERBES_CPP
+#define _HERBES_CPP
+
 #include <iostream>
 #include <string>
 
 using namespace std;
-
 class Herbes {
 public:
- virtual string toString() = 0;
+    virtual string toString() = 0;
 };
 
 class Persil : public Herbes
@@ -39,3 +41,4 @@ public:
         return "Romarin";
     }
 };
+#endif

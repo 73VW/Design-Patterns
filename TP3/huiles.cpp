@@ -1,3 +1,6 @@
+#ifndef _HUILES_CPP
+#define _HUILES_CPP
+
 #include <iostream>
 #include <string>
 
@@ -39,3 +42,4 @@ public:
         return "Huile de Tournesol";
     }
 };
+#endif
