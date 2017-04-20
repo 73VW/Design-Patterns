@@ -7,7 +7,7 @@
 #include "huiles.cpp"
 #include "abstractFactory.cpp"
 
-class CuissonFactory : public AbstractFactory
+class PotageFactory : public AbstractFactory
 {
 public:
 public:

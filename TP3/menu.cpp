@@ -8,12 +8,12 @@
 #include "herbes.cpp"
 #include "abstractFactory.cpp"
 
-using namespace std;
 
 class Menu {
 public:
     Menu(AbstractFactory *f){
         factory=f;
+        construct();
     }
     void construct(){
         legume = factory->createLegumes();
@@ -21,8 +21,9 @@ public:
         herbe = factory->createHerbes();
     }
 
-    string toString(){
-        return "Ce menu contient les produits suivants:" + endl + legume->toString() + endl + huile->toString() + endl + herbe->toString();
+    std::string toString(){
+        std::string temp = "Ce menu contient les produits suivants:\n" + legume->toString() + "\r\n" + huile->toString() + "\r\n" + herbe->toString();
+        return temp;
     }
 private:
     Legumes *legume;

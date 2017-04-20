@@ -5,12 +5,10 @@
 #include "potageFactory.cpp"
 #include "saladeFactory.cpp"
 #include "vapeurFactory.cpp"
-#define LINUX
 
 using namespace std;
 int main() {
-    AbstractFactory *f = new CuissonFactory();
+    AbstractFactory *f = new SaladeFactory();
     Menu *men = new Menu(f);
-
     std::cout << men->toString()<<endl;
 }

@@ -10,7 +10,7 @@
 class VapeurFactory : public AbstractFactory
 {
 public:
-  Legume* createLegumes(){
+  Legumes* createLegumes(){
     return new Courgette();
   }
 
